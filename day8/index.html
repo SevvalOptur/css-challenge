@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="signboard">
+        <div class="center">
+            <div class="ball"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            for (let i = 1; i <= 8; i++) {
+                $('.center').append(`<div class="blubb-${i}"></div>`);
+            }
+            for (let i = 1; i <= 10; i++) {
+                $('.center').append(`<div class="sparkle-${i}"></div>`);
+            }
+        });
+    </script>
+</body>
+</html>
