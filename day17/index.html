@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="signboard">
+        <div class="stripes">
+        </div>
+        <div class="center">
+            <svg class="polygon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                <polygon class="middle" points="68,0 91,0 160,117 46,117 59,93 121,93" />
+                <polygon class="dark" points="68,41 79,59 46,117 160,117 148,140 11,140" />
+                <polygon class="light" points="0,117 68,0 121,93 98,93 68,41 11,140" />
+            </svg>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            for (let i = 1; i <= 29; i++) {
+                $('.stripes').append(`<div class="stripe"></div>`);
+            }
+        });
+    </script>
+</body>
+</html>
