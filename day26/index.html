@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 26</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="signboard">
+        <div class="card active">
+            <div class="number-bg"></div>
+            <div class="number">1</div>
+            <div class="text">
+                <span class="headline">The couch</span>
+                <p>If you to grow, get outside<br/> your comfort zone.</p>
+            </div>
+            <div class="button">Ok</div>
+        </div>
+        <div class="card">
+            <div class="number-bg"></div>
+            <div class="number">2</div>
+            <div class="text">
+                <span class="headline">Failing is learning</span>
+                <p>Pick yourself up, dust yourself off,<br/> and start again.</p>
+            </div>
+            <div class="button">Ok</div>
+        </div>
+        <div class="card">
+            <div class="number-bg"></div>
+            <div class="number">3</div>
+            <div class="text">
+                <span class="headline">Flowers and rainbows</span>
+                <p>Always be yourself,<br/> unless you can be a unicorn.</p>
+            </div>
+            <div class="button">Ok</div>
+        </div>
+    </div>
+
+    <script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
+    <script>
+        var active = 1;
+        $('.button').bind('click', function() {
+            $('.card:nth-child(' + active + ')').removeClass('active').addClass('inactive');
+            if (active == 3) {
+                active = 0;
+            }
+            active++;
+            $('.card:nth-child(' + active + ')').removeClass('inactive').addClass('active');
+        });
+    </script>
+</body>
+</html>
